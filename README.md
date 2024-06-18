@@ -15,15 +15,21 @@ Este repositório contém os códigos e materiais complementares para o livro "P
 - Examinar sínteses estatísticas e visualizar os dados do estudo de caso.
 - Implementar a codificação one-hot (one-hot encoding) em variáveis categóricas.
 
-## Instalação
+## Bibliotecas Necessárias
 
-Para os projetos desse repositório você vai precisar das seguintes bibliotecas:
+Para executar os projetos deste repositório, você precisará ter instaladas as seguintes bibliotecas Python:
 
-```sh
-pip install pandas
-```
-```sh
-pip install numpy
+- `numpy`: Para computação numérica eficiente.
+- `pandas`: Para manipulação e análise de dados.
+- `matplotlib` e `seaborn`: Para visualização de dados.
+- `scikit-learn`: Para aprendizado de máquina e ferramentas de modelagem.
+- `jupyterlab` (opcional): Para executar os notebooks Jupyter interativamente.
+
+
+#### Você pode instalar essas bibliotecas utilizando o `pip`. Exemplo:
+
+```bash
+pip install nome_da_biblioteca
 ```
 
 ## Contribuição
