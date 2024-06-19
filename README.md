@@ -6,7 +6,7 @@
 
 Este repositório contém os códigos e materiais complementares para o livro "Projetos de Ciência de Dados com Python" de Stephen Klosterman.
 
-## Capítulo 1: Exploração e Limpeza de Dados
+## Capítulo 1: Exploração e limpeza de Dados
 
 Objetivos do Aprendizado:
 
