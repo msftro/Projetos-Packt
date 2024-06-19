@@ -15,6 +15,17 @@ Objetivos do Aprendizado:
 - Examinar sínteses estatísticas e visualizar os dados do estudo de caso.
 - Implementar a codificação one-hot (one-hot encoding) em variáveis categóricas.
 
+## Capítulo 2: Scikit-Learn e avaliação de modelo
+
+Objetivos do Aprendizado:
+
+- Explicar a variável resposta.
+- Descrever as implicações de dados desbalanceados na classificação binária.
+- Dividir os dados em conjuntos de treinamento e teste.
+- Descrever o ajuste do modelo no scikit-learn.
+- Derivar várias métricas para a classificação binária.
+- Criar uma curva ROC e uma curva precision-recall.
+
 ## Bibliotecas Necessárias
 
 Para executar os projetos deste repositório, você precisará ter instaladas as seguintes bibliotecas Python:
