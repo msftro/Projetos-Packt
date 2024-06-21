@@ -1,6 +1,6 @@
 # Projetos de Ciência de Dados com Python
 
-<img src="https://github.com/msftro/Projetos-Packt/assets/145237548/ecbee1fd-9580-4c5a-8817-102eec69fb88">
+<img src="https://github.com/msftro/MLFlow/assets/145237548/f8848c13-34e4-4141-8593-b753a131eb5f">
 
 ## Resumo
 
@@ -26,26 +26,28 @@ Objetivos do Aprendizado:
 - Derivar várias métricas para a classificação binária.
 - Criar uma curva ROC e uma curva precision-recall.
 
-## Bibliotecas Necessárias
+## Bibliotecas Requeridas
 
-Para executar os projetos deste repositório, você precisará ter instaladas as seguintes bibliotecas Python:
+Crie um arquivo chamado `requirements.txt` no repositório com o seguinte conteúdo:
 
-- `numpy`: Para computação numérica eficiente.
-- `pandas`: Para manipulação e análise de dados.
-- `matplotlib` e `seaborn`: Para visualização de dados.
-- `scikit-learn`: Para aprendizado de máquina e ferramentas de modelagem.
-- `jupyterlab` (opcional): Para executar os notebooks Jupyter interativamente.
+```plaintext
+pandas
+feature_engine
+scikit-learn
+```
 
-**Você pode instalar essas bibliotecas utilizando o `pip`. Exemplo:**
+Isso garantirá que todas as bibliotecas necessárias sejam instaladas corretamente quando o usuário executar o comando:
 
-```bash
-pip install nome_da_biblioteca
+```
+pip install -r requirements.txt
 ```
 
 ## Contribuição
 
 Se você deseja contribuir com este projeto, por favor, faça um *fork* do repositório e envie um *pull request* com suas alterações.
 
-## Quem sou eu
+## Contato
 
-[Márcio Ferreira](https://www.linkedin.com/in/ms-ferreira/).
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para abrir uma issue ou entrar em contato:
+
+- LinkedIn: [Márcio Ferreira](https://www.linkedin.com/in/ms-ferreira)
