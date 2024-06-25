@@ -91,3 +91,40 @@ sum(valid_pay_1_mask)
 # Cria uma cópia do DataFrame limpo excluindo as linhas onde 'PAY_1' contém 'Not available'
 df_clean_2 = df_clean_1.loc[valid_pay_1_mask, :].copy()
 df_clean_2.shape  # Mostra as dimensões do DataFrame final limpo
+
+# %%
+df_clean_2['PAY_1'].value_counts()
+
+# %%
+df_clean_2['PAY_1'] = df_clean_2['PAY_1'].astype('int64')
+
+# %%
+df_clean_2[['PAY_1', 'PAY_2']].info()
+
+# %%
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+# %%
+mpl.rcParams['figure.dpi'] = 400
+
+df_clean_2[['LIMIT_BAL', 'AGE']].hist()
+
+# %%
+df_clean_2[['LIMIT_BAL', 'AGE']].describe()
+
+# %%
+df_clean_2['EDUCATION'].value_counts()
+
+# %%
+df_clean_2['EDUCATION'] = df_clean_2['EDUCATION'].replace(to_replace=[0, 5, 6], value=4)
+df_clean_2['EDUCATION'].value_counts()
+
+# %%
+df_clean_2['MARRIAGE'].value_counts()
+
+# %%
+df_clean_2['MARRIAGE'] = df_clean_2['MARRIAGE'].replace(0, 3)
+df_clean_2['MARRIAGE'].value_counts()
+
+# %%
