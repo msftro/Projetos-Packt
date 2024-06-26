@@ -128,3 +128,27 @@ df_clean_2['MARRIAGE'] = df_clean_2['MARRIAGE'].replace(0, 3)
 df_clean_2['MARRIAGE'].value_counts()
 
 # %%
+df_clean_2.groupby('EDUCATION').agg({'default payment next month':'mean'}).plot.bar(legend=False)
+plt.ylabel('Default rate')
+plt.xlabel('Education level: orginal encoding')
+
+# %%
+df_clean_2['EDUCATION_CAT'] = 'none'
+df_clean_2[['EDUCATION', 'EDUCATION_CAT']].head()
+
+# %%
+cat_mapping = {
+    1: 'graduate school',
+    2: 'university',
+    3: 'high school',
+    4: 'others'
+}
+
+df_clean_2['EDUCATION_CAT'] = df_clean_2['EDUCATION'].map(cat_mapping).astype('category')
+df_clean_2[['EDUCATION', 'EDUCATION_CAT']].head(10)
+
+# %%
+edu_ohe = pd.get_dummies(df_clean_2['EDUCATION_CAT']).astype(int)
+edu_ohe.head(10)
+
+# %%
