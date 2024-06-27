@@ -152,3 +152,13 @@ edu_ohe = pd.get_dummies(df_clean_2['EDUCATION_CAT']).astype(int)
 edu_ohe.head(10)
 
 # %%
+df_with_ohe = pd.concat([df_clean_2, edu_ohe], axis=1)
+df_with_ohe[['EDUCATION_CAT', 
+            'graduate school',
+            'high school',
+            'university',
+            'others']].head(10)
+
+# %%
+df_with_ohe.to_csv('data/Chapter_1_cleaned_data.csv', index=False)
+
