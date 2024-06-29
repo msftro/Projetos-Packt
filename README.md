@@ -28,6 +28,8 @@ Objetivos do Aprendizado:
 
 ## Capítulo 3: Detalhes da regressão logística e exploração de características
 
+Objetivos do Aprendizado:
+
 - Criar *list comprehensions* em Python
 - Descrever como funciona a regressão logística
 - Formular as versões sigmóide e logit da regressão logística
@@ -35,6 +37,8 @@ Objetivos do Aprendizado:
 - Definir o limite de decisão linear de uma regressão logística
 
 ## Capítulo 4: O *trade-off* entre viés e variância
+
+Objetivos do Aprendizado:
 
 - Descrever a função custo de perda logarítimica da regressão logística
 - Implementar o procesimento de gradiente descendente para estimar parâmetros do modelo
