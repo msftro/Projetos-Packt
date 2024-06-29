@@ -26,6 +26,24 @@ Objetivos do Aprendizado:
 - Derivar várias métricas para a classificação binária.
 - Criar uma curva ROC e uma curva precision-recall.
 
+## Capítulo 3: Detalhes da regressão logística e exploração de características
+
+- Criar *list comprehensions* em Python
+- Descrever como funciona a regressão logística
+- Formular as versões sigmóide e logit da regressão logística
+- Utilizar a seleção univariada para encontrar características importantes
+- Definir o limite de decisão linear de uma regressão logística
+
+## Capítulo 4: O *trade-off* entre viés e variância
+
+- Descrever a função custo de perda logarítimica da regressão logística
+- Implementar o procesimento de gradiente descendente para estimar parâmetros do modelo
+- Articular suposições estatísticas formais do modelo de regressão logística
+- Caracterizar o *trade-off* entre viés e variância e usá-lo para melhorar os modelos
+- Formular o lasso e a regularização ridge e usá-los no scikit-learn
+- Projetar uma função para selecionar hiperparâmetros de regularização cruzada
+- Criar características de interação por engenharia para melhorar um modelo de subajuste
+
 ## Bibliotecas Requeridas
 
 Crie um arquivo chamado `requirements.txt` no repositório com o seguinte conteúdo:
