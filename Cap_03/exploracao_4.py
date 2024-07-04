@@ -222,3 +222,73 @@ plt.legend(['Positive class', 'Negative class',
             'Positive predictions', 'Negative predictions'])
 
 # %%
+theta_1 = example_lr.coef_[0][0]
+theta_2 = example_lr.coef_[0][1]
+print(theta_1, theta_2)
+
+# %%
+theta_0 = example_lr.intercept_
+
+# %%
+X_1_decision_boundary = np.array([0, 10])
+X_2_decision_boundary = -(theta_1/theta_2)*X_1_decision_boundary -(theta_0/theta_2)
+
+# %%
+plt.scatter(X_1_pos, X_2_pos, color='red', marker='x', label='Positive class')
+plt.scatter(X_1_neg, X_2_neg, color='blue', marker='x', label='Negative class')
+plt.scatter(X[positive_indices, 0], X[positive_indices, 1], s=150, marker='o',
+            edgecolors='red', facecolors='none', label='Positive predictions')
+plt.scatter(X[negative_indices, 0], X[negative_indices, 1], s=150, marker='o',
+            edgecolors='blue', facecolors='none', label='Negative predictions')
+dec = plt.plot(X_1_decision_boundary, X_2_decision_boundary, 'k-',
+               label='Decidion boundary')
+plt.xlabel('$X_1$')
+plt.ylabel('$X_2$')
+plt.legend(loc=[0.25, 1.05])
+
+# %%
+from sklearn import metrics
+from sklearn.model_selection import train_test_split
+
+# %%
+X = df[['PAY_1', 'LIMIT_BAL']]
+y = df['default payment next month']
+
+X_train, X_test, y_train, y_test = train_test_split(X,
+                                                    y,
+                                                    test_size=0.2,
+                                                    random_state=24)
+
+# %%
+from sklearn import linear_model
+
+lr = linear_model.LogisticRegression(solver='liblinear')
+lr
+
+# %%
+lr.fit(X_train, y_train)
+y_pred = lr.predict(X_test)
+y_pred_proba = lr.predict_proba(X_test)
+
+# %%
+ones_and_features = np.hstack([np.ones((X_test.shape[0],1)), X_test])
+
+# %%
+intercept_and_coefs = np.concatenate([lr.intercept_.reshape(1,1), lr.coef_], axis=1)
+
+# %%
+X_lin_comb = np.dot(intercept_and_coefs, np.transpose(ones_and_features))
+
+# %%
+y_pred_proba_manual = sigmoide(X_lin_comb)
+
+# %%
+y_pred_manual = y_pred_proba_manual >= 0.5
+
+# %%
+metrics.roc_auc_score(y_test, y_pred_proba_manual.reshape(y_pred_proba_manual.shape[1],))
+
+# %%
+metrics.roc_auc_score(y_test, y_pred_proba[:,1])
+
+# %%
