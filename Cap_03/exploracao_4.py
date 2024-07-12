@@ -286,6 +286,9 @@ y_pred_proba_manual = sigmoide(X_lin_comb)
 y_pred_manual = y_pred_proba_manual >= 0.5
 
 # %%
+np.array_equal(y_pred.reshape(1,-1), y_pred_manual)
+
+# %%
 metrics.roc_auc_score(y_test, y_pred_proba_manual.reshape(y_pred_proba_manual.shape[1],))
 
 # %%
