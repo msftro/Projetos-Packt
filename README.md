@@ -48,6 +48,17 @@ Objetivos do Aprendizado:
 - Projetar uma função para selecionar hiperparâmetros de regularização cruzada
 - Criar características de interação por engenharia para melhorar um modelo de subajuste
 
+## Capítulo 5: Árvores de decisão e florestas aleatórias
+
+Objetivos do Aprendizado:
+
+- Treinar um modelo de árvore de decisão no scikit-learn
+- Usar o Graphviz para visualizar um modelo de árvore de decisão treinado
+- Formular as funções custo usadas para dividir nós em uma árvore de decisão
+- Executar uma busca de hiperparâmetro em grade usando a validação cruzada com funções do scikit-learn
+- Treinar um modelo de floresta aleatória no scikit-learn
+- Avaliar as características mais importantes em um modelo de floresta aleatória
+  
 ## Bibliotecas Requeridas
 
 Crie um arquivo chamado `requirements.txt` no repositório com o seguinte conteúdo:
