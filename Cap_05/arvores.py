@@ -172,3 +172,57 @@ ax.set_xlabel('X coordinate')
 ax.set_ylabel('Y coordinate')
 
 # %%
+#Exercício
+
+rf_params = {
+    'max_depth':[3, 6, 9, 12],
+    'n_estimators':[10, 50, 100, 200]
+}
+
+# %%
+grid = GridSearchCV(rf, param_grid=rf_params, scoring='roc_auc',
+                  n_jobs=None, refit=True, cv=4,
+                  verbose=2, error_score=np.nan,
+                  return_train_score=True)
+
+# %%
+grid.fit(X_train, y_train)
+
+# %%
+grid_results = pd.DataFrame(grid.cv_results_)
+grid_results.sort_values('rank_test_score', ascending=True).head()
+
+# %%
+grid_results[grid_results['rank_test_score'] == 1].T
+
+# %%
+xx_rf, yy_rf = np.meshgrid(range(5), range(5))
+
+# %%
+cm_rf = plt.cm.jet
+
+# %%
+ax_rf = plt.axes()
+pcolor_graph = ax_rf.pcolormesh(xx_rf, yy_rf, grid_results['mean_test_score'].values.reshape((4,4)), cmap=cm_rf)
+plt.colorbar(pcolor_graph, label='Average testing ROC AUC')
+ax_rf.set_aspect('equal')
+ax_rf.set_xticks([0.5, 1.5, 2.5, 3.5])
+ax_rf.set_yticks([0.5, 1.5, 2.5, 3.5])
+ax_rf.set_xticklabels([str(tick_label) for tick_label in rf_params['n_estimators']])
+ax_rf.set_yticklabels([str(tick_label) for tick_label in rf_params['max_depth']])
+ax_rf.set_xlabel('Number of trees')
+ax_rf.set_ylabel('Maximum depth')
+
+# %%
+grid.best_params_
+
+# %%
+feat_imp_df_act = pd.DataFrame({
+    'Feature name':features_response[:-1],
+    'Importance':grid.best_estimator_.feature_importances_
+})
+
+# %%
+feat_imp_df_act.sort_values('Importance', ascending=False)
+
+# %%
