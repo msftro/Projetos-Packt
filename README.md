@@ -58,15 +58,28 @@ Objetivos do Aprendizado:
 - Executar uma busca de hiperparâmetro em grade usando a validação cruzada com funções do scikit-learn
 - Treinar um modelo de floresta aleatória no scikit-learn
 - Avaliar as características mais importantes em um modelo de floresta aleatória
+
+## Capítulo 6: Imputação de dados faltantes, análise financeira e distribuição para o cliente
+
+Objetivos do Aprendizado:
+
+- Comparar os resultados de todos os modelos contruídos para um estudo de caso
+- Substituir dados faltantes usando um conjunto de estratégias de imputação
+- Construir um modelo de classificação multiclasse
+- Conduzir uma análise financeira para encontrar o limite ótimo da classificação binária
+- Obter *insights* financeiros a partir do modelo para ajudar o cliente a conduzir a estratégia orçamentária e operacional
+- Distribuir o modelo e fazer recomendações de uso
   
 ## Bibliotecas Requeridas
 
 Crie um arquivo chamado `requirements.txt` no repositório com o seguinte conteúdo:
 
 ```plaintext
-pandas
-feature_engine
-scikit-learn
+numpy==1.25.0
+pandas==2.0.3
+matplotlib==3.7.2
+graphviz==0.20.1
+scikit-learn==1.3.0
 ```
 
 Isso garantirá que todas as bibliotecas necessárias sejam instaladas corretamente quando o usuário executar o comando:
